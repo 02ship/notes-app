@@ -10,7 +10,6 @@
     var note2 = new Note("Test note 2")
     noteList.addNote(note2.text)
     var subject = new NoteListView(noteList);
-    console.log(noteList.list)
     assert.isTrue(subject.returnHTML() === "<ul><li><div>Test note</div></li><li><div>Test note 2</div></li></ul>")
   }
   function noteListViewTestEmpty() {
