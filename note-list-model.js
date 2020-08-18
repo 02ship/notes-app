@@ -6,8 +6,12 @@
     function listNotes() {
       console.log(this.list);
     }
+    function addNote(note) {
+      this.list.push(note)
+    }
     return {
-      listNotes
+      listNotes,
+      addNote
     }
   })();
   exports.NoteList = NoteList;
