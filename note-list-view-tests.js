@@ -2,13 +2,13 @@
   var note = new Note("Test note")
   var noteList = new NoteList()
   function noteListViewTestSingle() {
-    noteList.addNote(note.text)
+    noteList.addNote(note)
     var subject = new NoteListView(noteList);
     assert.isTrue(subject.returnHTML() === "<ul><li><div>Test note</div></li></ul>");
   }
   function noteListViewTestMulti() {
     var note2 = new Note("Test note 2")
-    noteList.addNote(note2.text)
+    noteList.addNote(note2)
     var subject = new NoteListView(noteList);
     assert.isTrue(subject.returnHTML() === "<ul><li><div>Test note</div></li><li><div>Test note 2</div></li></ul>")
   }

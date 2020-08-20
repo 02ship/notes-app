@@ -1,10 +1,14 @@
 (function(exports) {
-  function NoteListView(NoteList) {
-    this.list = NoteList.list
+  function NoteListView(noteList) {
+    this.list = noteList.list
   }
   NoteListView.prototype = (function() {
     function returnHTML() {
-      return "<ul><li><div>" + this.list.join('</div></li><li><div>') + "</div></li></ul>"
+      var array = []
+      console.log(this.list)
+      this.list.forEach(note => array.push(note.text));
+      console.log(array)
+      return "<ul><li><div>" + array.join('</div></li><li><div>') + "</div></li></ul>"
     }
     return {
       returnHTML

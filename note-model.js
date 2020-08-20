@@ -5,7 +5,7 @@
 
   Note.prototype = (function() {
     function readText() {
-      console.log(this.text);
+      return this.text;
     }
     return {
       readText
